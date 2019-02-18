@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71c308cf-78da-48e2-84c2-f6ed8e7305bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DandC.go" beforeDir="false" afterPath="$PROJECT_DIR$/DandC.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,9 +15,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DandC.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+            <state relative-caret-position="285">
+              <caret line="71" column="65" selection-start-line="71" selection-start-column="65" selection-end-line="71" selection-end-column="65" />
+              <folding>
+                <element signature="e#14#44#0" expanded="true" />
+              </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../software_paradigms/hw2/assignment2-pr4-seanlarge/Assignment2-Go/data-types.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-15" />
           </provider>
         </entry>
       </file>
@@ -35,6 +44,11 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>3</find>
+    </findStrings>
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.11.5/libexec" />
   <component name="Git.Settings">
@@ -67,7 +81,30 @@
           <expand>
             <path>
               <item name="go_algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go_algorithm" type="47feb1d3:ProjectViewModuleNode" />
+            </path>
+            <path>
+              <item name="go_algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go_algorithm" type="47feb1d3:ProjectViewModuleNode" />
               <item name="go_algorithm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="go_algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go_algorithm" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="hw2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="go_algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go_algorithm" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="hw2" type="462c0819:PsiDirectoryNode" />
+              <item name="assignment2-pr4-seanlarge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="go_algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go_algorithm" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="hw2" type="462c0819:PsiDirectoryNode" />
+              <item name="assignment2-pr4-seanlarge" type="462c0819:PsiDirectoryNode" />
+              <item name="Assignment2-Go" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -97,9 +134,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11802575" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.04434907" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -133,10 +171,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../software_paradigms/hw2/assignment2-pr4-seanlarge/Assignment2-Go/data-types.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DandC.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        <state relative-caret-position="285">
+          <caret line="71" column="65" selection-start-line="71" selection-start-column="65" selection-end-line="71" selection-end-column="65" />
+          <folding>
+            <element signature="e#14#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
