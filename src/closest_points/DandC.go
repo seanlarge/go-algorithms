@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"math"
 )
 
 // points data structure
@@ -65,6 +66,32 @@ func sortY(a[] Points) []Points {
 	return a
 }
 
+// A utility function to find the distance between two points
+func dist(p1 Points, p2 Points) float64{
+	num := float64((p1.X - p2.X)*(p1.X - p2.X) +
+		(p1.Y - p2.Y)*(p1.Y - p2.Y))
+	return math.Sqrt(num)
+}
+
+func closestPair(xP[] Points, yP[] Points ){
+	// brute force
+	if len(xP) <= 3 {
+		bruteForce(xP, len(xP))
+	}
+}
+
+func bruteForce(p [] Points, n int) float64{
+	var min float64 = math.Inf(3)
+	for i := 0; i < n; i++ {
+		for j := i+1; i < n; j++ {
+			if dist(p[i],p[j]) < min{
+				min = dist(p[i], p[j])
+			}
+		}
+	}
+	return min
+}
+
 func main(){
 	fmt.Println("D and C alog closest pair of points")
 
@@ -85,12 +112,7 @@ func main(){
 	// closestPoint( P, N/2), closestPoint(Q, N/2)
 
 }
-func closestPair(xP[] Points, yP[] Points ){
-	// brute force
-	if len(xP) <= 3 {
-		fmt.Println("length less than 3")
-	}
-}
+
 //closestPair of (xP, yP)
 //	where xP is P(1) .. P(N) sorted by x coordinate, and
 //		  yP is P(1) .. P(N) sorted by y coordinate (ascending order)
