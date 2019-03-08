@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
 	"math"
+	"math/rand"
 )
 
 // points data structure
@@ -73,41 +73,58 @@ func dist(p1 Points, p2 Points) float64{
 	return math.Sqrt(num)
 }
 
-func closestPair(xP[] Points, yP[] Points ){
-	// brute force
-	if len(xP) <= 3 {
-		bruteForce(xP, len(xP))
-	}
-}
-
-func bruteForce(p [] Points, n int) float64{
-	var min float64 = math.Inf(3)
-	for i := 0; i < n; i++ {
-		for j := i+1; i < n; j++ {
+func bruteForce(p [] Points) (float64, [] Points){
+	 min := math.Inf(1)
+	 closestPoints := make([]Points, 2)
+	for i := 0; i <= len(p) - 1; i++ {
+		for j := i+1; j <= len(p) - 1; j++ {
 			if dist(p[i],p[j]) < min{
 				min = dist(p[i], p[j])
+				closestPoints[0] = p[i]
+				closestPoints[1] = p[j]
 			}
 		}
 	}
-	return min
+	return min, closestPoints
+}
+
+func closestPair( p [] Points ) (float64, [] Points){
+
+	// brute force
+	//if len(xP) <= 10 {
+	//	return bruteForce(xP)
+	//}
+
+	//	xL ← points of xP from 1 to ⌈N/2⌉
+	fmt.Println(len(p))
+
+	xl := sortX(p[ :len(p) / 2  ])
+	fmt.Println(xl)
+	//	xR ← points of xP from ⌈N/2⌉+1 to N
+	xr := sortX(p[len(p) / 2:  ])
+
+	fmt.Println(xr)
+	//	xm ← xP(⌈N/2⌉)x
+	//	yL ← { p ∈ yP : px ≤ xm }
+	//	yR ← { p ∈ yP : px > xm }
+	//	(dL, pairL) ← closestPair of (xL, yL)
+	//	(dR, pairR) ← closestPair of (xR, yR)
+	//	(dmin, pairMin) ← (dR, pairR)
+	return 0, nil
 }
 
 func main(){
 	fmt.Println("D and C alog closest pair of points")
 
-	var points=  [] Points {{2,3}, {12, 30}, {50, 54},}
+	var points =  [] Points {{12, 30},{2,3}, {1,10},{5,80},{7,100}, {50, 54},{60, 54}, {100, 100}}
 	// {80, 4}, {12,18}, {3,4}, {40,50}, {5, 1}, {12, 10}, {3, 4}
 	// sort the points by the x coordinates into a list called x
-	var x = sortX(points)
-
-
-	// same for y
-	 var y = sortY(points)
 
 
 	// divide the points into lists P and Q with all points in P to the left of all points in Q
 	// i e divide in half
-	closestPair(x,y)
+	//var pair  = closestPair(x,y)
+	fmt.Println(closestPair(points))
 
 	// closestPoint( P, N/2), closestPoint(Q, N/2)
 
@@ -118,3 +135,29 @@ func main(){
 //		  yP is P(1) .. P(N) sorted by y coordinate (ascending order)
 //	if N ≤ 3 then
 //	return closest points of xP using brute-force algorithm
+//else
+//	xL ← points of xP from 1 to ⌈N/2⌉
+//	xR ← points of xP from ⌈N/2⌉+1 to N
+//	xm ← xP(⌈N/2⌉)x
+//	yL ← { p ∈ yP : px ≤ xm }
+//	yR ← { p ∈ yP : px > xm }
+//	(dL, pairL) ← closestPair of (xL, yL)
+//	(dR, pairR) ← closestPair of (xR, yR)
+//	(dmin, pairMin) ← (dR, pairR)
+//if dL < dR then
+//(dmin, pairMin) ← (dL, pairL)
+//endif
+//yS ← { p ∈ yP : |xm - px| < dmin }
+//nS ← number of points in yS
+//(closest, closestPair) ← (dmin, pairMin)
+//for i from 1 to nS - 1
+//k ← i + 1
+//while k ≤ nS and yS(k)y - yS(i)y < dmin
+//if |yS(k) - yS(i)| < closest then
+//(closest, closestPair) ← (|yS(k) - yS(i)|, {yS(k), yS(i)})
+//endif
+//k ← k + 1
+//endwhile
+//endfor
+//return closest, closestPair
+//endif
