@@ -1,5 +1,7 @@
 # go-algorithms
 algorithm implementation using go
+# Parking lot
+- To be filled in
 # D&C
 - To be filled in 
 # Dynamic
